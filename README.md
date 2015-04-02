@@ -1,52 +1,19 @@
 # Final Project Assignment 2: Explore One More! (FP2) 
-DUE March 30, 2015 Monday (2015-03-30)
 
-This is just like FP1, but where you do a different library. (Full description of FP1 is [on Piazza.][piazza])
+### My Library: rsound
 
-During this assignment, you should start looking for teammates. See the project schedule [on Piazza.][schedule]
+For my Exporation 2, I decided to delve into the popular audio library rsound.  The documentation is good and it seems to be in popular use because I found various resources to help me start out.
 
-Write your report right in this file. Instructions are below. You can delete them if you like, or just leave them at the bottom.
-You are allowed to change/delete anything in this file to make it into your report. It will be public.
+I am in the process in joining a group that is looking to use rsound as a library.  I had one of those members pull me up to speed on how to use the basics of rsound.  He created a simple racket code play a series of piano tones.  Using this, I wanted to try and explore how to make a keyboard piano.
 
-This file is formatted with the [**markdown** language][markdown], so take a glance at how that works.
+I found a thread on stackoverflow that demonstrated keypress events:
+http://stackoverflow.com/questions/14540119/on-key-in-racket
 
-This file IS your report for the assignment, including code and your story.
+Using this, I simply linked it to the notes to be played.  Here is the resulting code.
+<a href="http://imgur.com/S99dlLf"><img src="http://i.imgur.com/S99dlLf.png" title="source: imgur.com" /></a>
 
-Code is super easy in markdown, which you can easily do inline `(require net/url)` or do in whole blocks:
-```
-#lang racket
+There are some issues with this keypress.  If I quickly press a lot of keys or a lot of keys at the same time, the sound buffer gets overloaded quickly and potentially crashes the code.  it might be a problem with rsound but this is something worht investigating.
 
-(require net/url)
-```
+Learning how to keypress fits very well with what I wanted to do with FP1.  In FP1, I wanted to rotate my cube with the arrow keys.  I can go back and explore how to do that now.  But moving ahead, I want to see if i can make a simple visual with my keyboard piano.  Whenever a key is pressed, inside a window, a colored box will show up.  Each note will have its own color and it will fade out when released.
 
-### My Library: (library name here)
-Write what you did!
-Remember that this report must include:
- 
-* a narrative of what you did
-* the code that you wrote
-* output from your code demonstrating what it produced
-* any diagrams or figures explaining your work 
- 
-The narrative itself should be no longer than 350 words. Yes, you can add more files and link or refer to them. This is github, handling files is awesome and easy!
-
-Ask questions publicly in the Piazza group.
-
-### How to Do and Submit this assignment
-
-1. To start, [**fork** this repository][forking].
-1. Modify the README.md file and [**commit**][ref-commit] changes to complete your solution.
-  2. (This assignment is just one README.md file, so you can edit it right in github without cloning)
-  3. (You may need to clone and push if you want to add extra files)
-1. [Create a **pull request**][pull-request] on the original repository to turn in the assignment.
-
-<!-- Links -->
-[piazza]: https://piazza.com/class/i55is8xqqwhmr?cid=411
-[schedule]: https://piazza.com/class/i55is8xqqwhmr?cid=453
-[markdown]: https://help.github.com/articles/markdown-basics/
-[forking]: https://guides.github.com/activities/forking/
-[ref-clone]: http://gitref.org/creating/#clone
-[ref-commit]: http://gitref.org/basic/#commit
-[ref-push]: http://gitref.org/remotes/#push
-[pull-request]: https://help.github.com/articles/creating-a-pull-request
-
+I also feel that the group is leaning towards a graphic visualization of sound or some sort.  So this will be interesting!
